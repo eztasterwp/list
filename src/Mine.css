@@ -1,0 +1,117 @@
+.mine-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: calc(100vh - 60px); /* Уменьшили высоту чтобы не пересекалось с верхним меню */
+  width: 100vw;
+  margin-top: 60px; /* Добавили отступ сверху */
+  background: url('workspace.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-y: auto; /* Добавили возможность вертикальной прокрутки */
+}
+
+.points-display {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.points-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.points-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.points-text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #FFD700;
+  position: relative;
+}
+
+.hourly-income {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.info-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.info-tooltip {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.info-icon:hover + .info-tooltip,
+.info-tooltip:hover {
+  display: block;
+}
+
+.quests-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Два элемента в ряд */
+  gap: 10px;
+  width: 100%;
+  overflow-y: auto; /* Добавили возможность вертикальной прокрутки для контейнера квестов */
+  padding-bottom: 60px; /* Добавили отступ снизу, чтобы квесты не перекрывались нижним меню */
+}
+
+.quest-block {
+  background-color: rgba(0, 0, 0, 0.9); /* Темнее фон для лучшей читаемости */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer; /* Добавили курсор указатель при наведении */
+}
+
+.quest-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.quest-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quest-details {
+  font-size: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quest-icon {
+  margin-right: 5px;
+  color: #FFD700; /* Цвет иконки */
+}
