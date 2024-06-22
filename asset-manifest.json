@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.726783e6.css",
-    "main.js": "/list/static/js/main.ee27fe49.js",
+    "main.css": "/list/static/css/main.bf729b91.css",
+    "main.js": "/list/static/js/main.dba1d088.js",
     "static/media/coin.png": "/list/static/media/coin.33a0fa9eb163ca25d967.png",
     "static/media/workspace.jpg": "/list/static/media/workspace.25d38181e58d1865b79b.jpg",
     "static/media/background_earn.jpg": "/list/static/media/background_earn.301500be3b070eb65886.jpg",
     "static/media/background1.jpg": "/list/static/media/background1.eef8cae3a44980b72072.jpg",
+    "static/media/kiza.png": "/list/static/media/kiza.f33122786a23c47adbf4.png",
     "static/media/chester.png": "/list/static/media/chester.806e2859f042f0b8ba37.png",
     "static/media/chester-3.png": "/list/static/media/chester-3.9331d8f32e4e3495fed2.png",
     "static/media/chester-4.png": "/list/static/media/chester-4.9f3d6ca30087d59618db.png",
     "static/media/chester-1.png": "/list/static/media/chester-1.fd8db960df4d4858e800.png",
     "static/media/chester-2.png": "/list/static/media/chester-2.f6fd70ef0a253e38b357.png",
     "index.html": "/list/index.html",
-    "main.726783e6.css.map": "/list/static/css/main.726783e6.css.map",
-    "main.ee27fe49.js.map": "/list/static/js/main.ee27fe49.js.map"
+    "main.bf729b91.css.map": "/list/static/css/main.bf729b91.css.map",
+    "main.dba1d088.js.map": "/list/static/js/main.dba1d088.js.map"
   },
   "entrypoints": [
-    "static/css/main.726783e6.css",
-    "static/js/main.ee27fe49.js"
+    "static/css/main.bf729b91.css",
+    "static/js/main.dba1d088.js"
   ]
 }
