@@ -1,3 +1,4 @@
+/* Earn.css */
 .earn-page {
   display: flex;
   flex-direction: column;
@@ -5,10 +6,204 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: url('dragon.jpg') no-repeat center center fixed;
+  background: url('background_earn.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.case-container-wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.case-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.case {
+  width: 70px; /* Increased size for better visibility */
+  height: 70px; /* Increased size for better visibility */
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.case:hover {
+  transform: scale(1.1);
+}
+
+.case-cooldown {
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+.case-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.case-details {
+  background: linear-gradient(135deg, #57290b, #294c52);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.case-details img {
+  width: 60px; /* Same size as the case on the page */
+  height: 60px; /* Same size as the case on the page */
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 5px;
+  background: #000;
+}
+
+.case-details button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.case-details button + button {
+  margin-left: 10px; /* Adding space between buttons */
+}
+
+.case-details button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: scale(1.05);
+}
+
+.battle-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.battle-kiza {
+  width: 150px; /* Increased size for better visibility */
+  height: 150px; /* Increased size for better visibility */
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f06, #f79);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.battle-message {
+  margin-bottom: 20px;
+}
+
+.click-counter {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.cooldown-timer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.case-cost {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: rgba(255, 215, 0, 0.8);
+  color: black;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.coin-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+}
+
+.messages-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.message {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  animation: fadeOut 2s forwards;
+  z-index: 1001; /* Ensure messages are above Kiza image */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }

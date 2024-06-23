@@ -1,3 +1,4 @@
+// App.js
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +8,7 @@ import Friends from './Friends';
 import Earn from './Earn';
 import Airdrop from './Airdrop';
 import Notification from './Notification';
+import kiza from './images/kiza.png';
 
 function App() {
   const [points, setPoints] = useState(0);
@@ -15,11 +17,14 @@ function App() {
   const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const [level, setLevel] = useState(1);
   const [coinsPerTap, setCoinsPerTap] = useState(2);
-  const [coinsToLevelUp, setCoinsToLevelUp] = useState(500); // Начальное количество очков для повышения уровня
+  const [coinsToLevelUp, setCoinsToLevelUp] = useState(500);
   const [activeButton, setActiveButton] = useState('exchange');
   const [username, setUsername] = useState('User');
   const [notifications, setNotifications] = useState([]);
-  const [hourlyIncome, setHourlyIncome] = useState(0); // Доход в час
+  const [hourlyIncome, setHourlyIncome] = useState(0);
+  const [showMonolog, setShowMonolog] = useState(false);
+  const [monologShown, setMonologShown] = useState(false);
+  const [showBossBattle, setShowBossBattle] = useState(false);
 
   const initialQuests = [
     { id: 1, title: 'Купить удобрения', cost: 10, income: 5, level: 0, icon: faLeaf },
@@ -42,12 +47,12 @@ function App() {
     if (window.Telegram && window.Telegram.WebApp) {
       const tg = window.Telegram.WebApp;
       tg.ready();
-      tg.expand(); // Разворачивание приложения на полный экран
+      tg.expand(); 
       setUsername(tg.initDataUnsafe.user ? tg.initDataUnsafe.user.username : 'User');
     }
 
     const preventSwipe = (e) => {
-      if (e.touches.length >= 1 && activeButton === 'exchange' && !e.target.closest('.buttons-container')) {
+      if (e.touches.length >= 1 && (showBossBattle || (activeButton === 'exchange' && !e.target.closest('.buttons-container') && !e.target.closest('.monolog-button')))) {
         e.preventDefault();
       }
     };
@@ -59,7 +64,7 @@ function App() {
       document.removeEventListener('touchstart', preventSwipe);
       document.removeEventListener('touchmove', preventSwipe);
     };
-  }, [activeButton]);
+  }, [activeButton, showBossBattle]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -68,7 +73,7 @@ function App() {
         setTotalPoints(prevTotalPoints => prevTotalPoints + hourlyIncome);
         return newPoints;
       });
-    }, 10000); // Обновление очков каждые 10 секунд для тестирования
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [hourlyIncome]);
@@ -90,6 +95,13 @@ function App() {
         setPoints(prevPoints => {
           const newPoints = prevPoints + coinsPerTap;
           setTotalPoints(prevTotalPoints => prevTotalPoints + coinsPerTap);
+
+          // Проверка на 100 очков для показа монолога
+          if (newPoints >= 100 && !monologShown) {
+            setShowMonolog(true);
+            setMonologShown(true);
+          }
+
           if (newPoints >= coinsToLevelUp) {
             setLevel(prevLevel => {
               const newLevel = prevLevel + 1;
@@ -126,6 +138,12 @@ function App() {
 
   const handleButtonClick = (buttonId) => {
     setActiveButton(buttonId);
+  };
+
+  const handleMonologClose = () => {
+    setShowMonolog(false);
+    setPoints(prevPoints => prevPoints + 500);
+    setTotalPoints(prevTotalPoints => prevTotalPoints + 500);
   };
 
   const formatPoints = (points) => {
@@ -179,7 +197,7 @@ function App() {
       case 'friends':
         return <Friends />;
       case 'earn':
-        return <Earn />;
+        return <Earn setShowBossBattle={setShowBossBattle} points={points} setPoints={setPoints} setTotalPoints={setTotalPoints} />;
       case 'airdrop':
         return <Airdrop />;
       default:
@@ -192,7 +210,7 @@ function App() {
   }
 
   return (
-    <div className={`App ${activeButton !== 'exchange' && activeButton !== 'earn' ? 'no-background' : ''} ${activeButton === 'mine' ? 'mine-scroll' : ''}`} onTouchStart={handleTouchStart}>
+    <div className={`App ${activeButton === 'earn' ? 'earn-background' : ''} ${activeButton !== 'exchange' && activeButton !== 'earn' ? 'no-background' : ''} ${activeButton === 'mine' ? 'mine-scroll' : ''}`} onTouchStart={handleTouchStart}>
       <div className="header">
         <div className="header-top">
           <div className="header-col" style={{ display: 'flex', alignItems: 'center' }}>
@@ -233,6 +251,13 @@ function App() {
         </div>
       </div>
       {renderContent()}
+      {showMonolog && (
+        <div className="monolog-overlay">
+          <img src={kiza} alt="Kiza" className="monolog-image" />
+          <p>Wassup ma manny, keep grinding, airdrop soon!</p>
+          <button className="monolog-button" onClick={handleMonologClose}>GO</button>
+        </div>
+      )}
       <div className="buttons-container">
         <div className={`button ${activeButton === 'exchange' ? 'active' : ''}`} id="exchange" onClick={() => handleButtonClick('exchange')}>
           <FontAwesomeIcon icon={faHome} />
