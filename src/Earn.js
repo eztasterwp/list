@@ -10,13 +10,14 @@ import morgen from './images/morgen.png';
 import mell from './images/mell.png';
 import breal from './images/breal.png';
 import snoop from './images/snoop.png';
+import finalBoss from './images/stariy.png';
 
 const caseData = [
-  { id: 1, name: 'Chester', image: chester, cost: 500 },
-  { id: 2, name: 'Chester 1', image: chester1, cost: 1000 },
-  { id: 3, name: 'Chester 2', image: chester2, cost: 1500 },
-  { id: 4, name: 'Chester 3', image: chester3, cost: 2000 },
-  { id: 5, name: 'Chester 4', image: chester4, cost: 2500 },
+  { id: 1, name: 'Kizaru', image: chester, cost: 500 },
+  { id: 2, name: 'Morgenstern', image: chester1, cost: 1000 },
+  { id: 3, name: 'Mellstroy', image: chester2, cost: 1500 },
+  { id: 4, name: 'Snoop Dogg', image: chester3, cost: 2000 },
+  { id: 5, name: 'B-Real', image: chester4, cost: 2500 },
 ];
 
 const bossData = [
@@ -174,7 +175,9 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
 
   return (
     <div className="earn-page">
-      <h2>Earn</h2>
+      <div className="earn-info">
+        <p>Борись с боссом чтобы получить награду. Победи каждого босса раз в сутки чтобы забрать призы!</p>
+      </div>
       <div className="case-container-wrapper">
         <div className="case-container">
           {caseData.map((caseItem) => (
@@ -195,6 +198,10 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="final-boss-section">
+          <img src={finalBoss} alt="Final Boss" className="final-boss" />
+          <p>Сразись со Stariy_bog 1x1 на SF за мегаприз</p>
         </div>
       </div>
       {selectedCase && !showBattle && (
