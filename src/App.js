@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -52,14 +51,14 @@ function App() {
     }
 
     const preventSwipe = (e) => {
-      if (e.touches.length >= 1 && (showBossBattle || (activeButton === 'exchange' && !e.target.closest('.buttons-container') && !e.target.closest('.monolog-button')))) {
+      if (e.touches.length >= 1 && (showBossBattle || (activeButton === 'exchange' && !e.target.closest('.buttons-container') && !e.target.closest('.monolog-button') && !e.target.closest('.close-button')))) {
         e.preventDefault();
       }
     };
-
+  
     document.addEventListener('touchstart', preventSwipe, { passive: false });
     document.addEventListener('touchmove', preventSwipe, { passive: false });
-
+  
     return () => {
       document.removeEventListener('touchstart', preventSwipe);
       document.removeEventListener('touchmove', preventSwipe);

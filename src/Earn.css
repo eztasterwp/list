@@ -8,39 +8,51 @@
   width: 100vw;
   background: url('background_earn.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+}
+
+.earn-header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .case-container-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  margin-top: 20px;
 }
 
 .case-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 20px;
   justify-content: center;
-  gap: 10px;
   margin-top: 20px;
 }
 
 .case {
-  width: 70px; /* Increased size for better visibility */
-  height: 70px; /* Increased size for better visibility */
+  width: 90px;
+  height: 90px;
   background-size: cover;
   background-position: center;
   border: 2px solid #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   position: relative;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .case:hover {
   transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .case-cooldown {
@@ -54,51 +66,58 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .case-details {
-  background: linear-gradient(135deg, #57290b, #294c52);
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
   color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .case-details img {
-  width: 60px; /* Same size as the case on the page */
-  height: 60px; /* Same size as the case on the page */
-  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  border-radius: 15px;
   border: 2px solid #fff;
   padding: 5px;
   background: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .case-details button {
   margin-top: 10px;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #46009e, #feb47b);
   color: white;
-  border: none;
+  border: 2px solid #fff;
   font-size: 16px;
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .case-details button + button {
-  margin-left: 10px; /* Adding space between buttons */
+  margin-left: 10px; /* Добавлено пространство между кнопками */
 }
 
 .case-details button:hover {
   background: linear-gradient(135deg, #feb47b, #ff7e5f);
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .battle-overlay {
@@ -107,7 +126,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,8 +140,8 @@
 }
 
 .battle-kiza {
-  width: 150px; /* Increased size for better visibility */
-  height: 150px; /* Increased size for better visibility */
+  width: 150px;
+  height: 150px;
   margin-bottom: 20px;
   animation: pulse 2s infinite;
   border-radius: 50%;
@@ -142,11 +162,29 @@
 
 .battle-message {
   margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .click-counter {
   font-size: 24px;
   margin-top: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001; /* Ensure the close button is above everything else */
 }
 
 .cooldown-timer {
@@ -167,7 +205,7 @@
   background: rgba(255, 215, 0, 0.8);
   color: black;
   padding: 2px 5px;
-  border-radius: 50%;
+  border-radius: 12%;
   font-size: 12px;
   display: flex;
   align-items: center;
@@ -205,5 +243,23 @@
   100% {
     opacity: 0;
     transform: translateY(-20px);
+  }
+}
+
+.coin-animation {
+  position: absolute;
+  font-size: 20px;
+  color: gold;
+  animation: coinFly 2s forwards;
+}
+
+@keyframes coinFly {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 }

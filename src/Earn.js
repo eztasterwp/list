@@ -1,4 +1,3 @@
-// Earn.js
 import React, { useState, useEffect } from 'react';
 import './Earn.css';
 import chester from './images/chester.png';
@@ -7,6 +6,7 @@ import chester2 from './images/chester-2.png';
 import chester3 from './images/chester-3.png';
 import chester4 from './images/chester-4.png';
 import kiza from './images/kiza.png';
+import Notification from './Notification';
 
 const caseData = [
   { id: 1, name: 'Chester', image: chester, cost: 500 },
@@ -23,6 +23,8 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
   const [battleTime, setBattleTime] = useState(60); // 60 seconds for battle
   const [messages, setMessages] = useState([]); // Состояние для сообщений
   const [caseCooldowns, setCaseCooldowns] = useState({}); // Состояние для отслеживания кулдаунов сундуков
+  const [coins, setCoins] = useState([]); // Состояние для анимации монет
+  const [notification, setNotification] = useState(null); // Состояние для уведомлений
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -114,11 +116,10 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
     setShowBossBattle(false); // Разрешаем закрытие страницы
     if (won) {
       const earnedPoints = selectedCase.cost * 2;
-      alert(`You won the battle! You earned ${earnedPoints} points!`);
-      setPoints(points + earnedPoints);
-      setTotalPoints(totalPoints => totalPoints + earnedPoints);
+      setNotification(`You won the battle! You earned ${earnedPoints} points!`);
+      animateCoins(earnedPoints); // Анимация монет при победе
     } else {
-      alert('You lost the battle!');
+      setNotification('You lost the battle!');
     }
     setCaseCooldowns(prevCooldowns => {
       const updatedCooldowns = {
@@ -130,9 +131,32 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
     setSelectedCase(null);
   };
 
+  const handleCloseBattle = () => {
+    endBattle(false);
+  };
+
+  const animateCoins = (earnedPoints) => {
+    const newCoins = [];
+    for (let i = 0; i < earnedPoints / 50; i++) {
+      newCoins.push({
+        id: Date.now() + i,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+      });
+    }
+    setCoins(newCoins);
+    setTimeout(() => {
+      setCoins([]);
+      setPoints(points + earnedPoints);
+      setTotalPoints(totalPoints => totalPoints + earnedPoints);
+    }, 2000);
+  };
+
   return (
     <div className="earn-page">
-      <h2>Earn</h2>
+      <div className="earn-header">
+        <h2>Испытай удачу в битве за золото!</h2>
+      </div>
       <div className="case-container-wrapper">
         <div className="case-container">
           {caseData.map((caseItem) => (
@@ -168,6 +192,7 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
       )}
       {showBattle && (
         <div className="battle-overlay">
+          <div className="close-button" onClick={handleCloseBattle}>&times;</div>
           <div className="messages-container">
             {messages.map(message => (
               <div
@@ -187,6 +212,18 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
             {battleClicks}
           </div>
         </div>
+      )}
+      {coins.map(coin => (
+        <div
+          key={coin.id}
+          className="coin-animation"
+          style={{ top: `${coin.y}px`, left: `${coin.x}px` }}
+        >
+          💰
+        </div>
+      ))}
+      {notification && (
+        <Notification message={notification} onClose={() => setNotification(null)} />
       )}
     </div>
   );
