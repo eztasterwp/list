@@ -1,0 +1,50 @@
+/* Notification.css */
+.notification {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeInOut 2s forwards;
+  font-size: 12px;
+  max-width: 90%;
+  opacity: 0.9;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  margin-right: 5px;
+  color: #4CAF50; /* Зеленый цвет для иконки успеха */
+}
+
+.notification-close {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #FFD700; /* Желтый цвет для кнопки закрытия */
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

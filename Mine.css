@@ -1,0 +1,159 @@
+.mine-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  margin-top: 60px;
+  background: url('workspace.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-y: hidden; /* Скрывает полосу прокрутки, но оставляет возможность прокрутки */
+}
+
+.mine-page::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки в Webkit-браузерах */
+}
+
+.points-display {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2; /* Повышает уровень z-index */
+}
+
+.points-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.points-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.points-text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #FFD700;
+  position: relative;
+}
+
+.hourly-income {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.info-icon {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.info-tooltip {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.info-icon:hover + .info-tooltip,
+.info-tooltip:hover {
+  display: block;
+}
+
+.quests-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+  padding-top: 25px; /* Добавлен отступ сверху для удаления перекрытия с верхним меню */
+  padding-bottom: 80px; /* Добавлен отступ снизу для предотвращения перекрытия с нижним меню */
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.quests-container::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки в Webkit-браузерах */
+}
+
+.quest-block {
+  background: linear-gradient(135deg, #3b3b3b, #1f1f1f);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.quest-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.quest-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quest-details {
+  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quest-icon {
+  margin-right: 5px;
+  color: #FFD700;
+}
+
+.quest-icon-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.buttons-container {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  background-color: #444;
+  padding: 5px 0;
+  border-radius: 20px;
+  border: 1px solid #555;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 3; /* Повышает уровень z-index, чтобы меню всегда было поверх */
+}
