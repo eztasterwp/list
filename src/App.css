@@ -182,7 +182,7 @@ body {
 .plant {
   width: 250px;
   height: 250px;
-  background: url('coin.png') no-repeat center/contain;
+  background: url('coin1.png') no-repeat center/contain;
   filter: drop-shadow(0 0 20px rgba(0, 255, 0, 0.8)); 
   animation: grow 2s infinite alternate, leafEffect 5s infinite;
   user-select: none;
