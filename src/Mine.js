@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Mine.css'; // Убедитесь, что CSS файл подключен правильно
+import './Mine.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins, faClock, faLevelUpAlt, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -29,6 +29,9 @@ const Mine = ({ points, quests, onQuestPurchase, hourlyIncome }) => {
       <div className="quests-container">
         {quests.map(quest => (
           <div key={quest.id} className="quest-block" onClick={() => onQuestPurchase(quest.id)}>
+            <div className="quest-icon-wrapper">
+              <FontAwesomeIcon icon={quest.icon} className="quest-icon" />
+            </div>
             <div className="quest-title">{quest.title}</div>
             <div className="quest-details">
               <FontAwesomeIcon icon={faClock} className="quest-icon" />

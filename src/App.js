@@ -252,12 +252,12 @@ function App() {
       </div>
       {renderContent()}
       {showMonolog && (
-        <div className="monolog-overlay">
-          <img src={kiza} alt="Kiza" className="monolog-image" />
-          <p>Wassup ma manny, keep grinding, airdrop soon!</p>
-          <button className="monolog-button" onClick={handleMonologClose}>GO</button>
-        </div>
-      )}
+  <div className="monolog-overlay">
+    <img src={kiza} alt="Kiza" className="monolog-image" />
+    <p className="monolog-message">Wassup ma manny, keep grinding, airdrop soon!</p>
+    <button className="monolog-button" onClick={handleMonologClose}>GO</button>
+  </div>
+)}
       <div className="buttons-container">
         <div className={`button ${activeButton === 'exchange' ? 'active' : ''}`} id="exchange" onClick={() => handleButtonClick('exchange')}>
           <FontAwesomeIcon icon={faHome} />

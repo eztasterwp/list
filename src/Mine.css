@@ -3,15 +3,15 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: calc(100vh - 60px); /* Уменьшили высоту чтобы не пересекалось с верхним меню */
+  height: calc(100vh - 60px);
   width: 100vw;
-  margin-top: 60px; /* Добавили отступ сверху */
+  margin-top: 60px;
   background: url('workspace.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   text-align: center;
   box-sizing: border-box;
-  overflow-y: auto; /* Добавили возможность вертикальной прокрутки */
+  overflow-y: auto;
 }
 
 .points-display {
@@ -74,22 +74,23 @@
 
 .quests-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Два элемента в ряд */
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   width: 100%;
-  overflow-y: auto; /* Добавили возможность вертикальной прокрутки для контейнера квестов */
-  padding-bottom: 60px; /* Добавили отступ снизу, чтобы квесты не перекрывались нижним меню */
+  overflow-y: auto;
+  padding-bottom: 60px;
 }
 
 .quest-block {
-  background-color: rgba(0, 0, 0, 0.9); /* Темнее фон для лучшей читаемости */
+  background: linear-gradient(135deg, #3b3b3b, #1f1f1f);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer; /* Добавили курсор указатель при наведении */
+  cursor: pointer;
+  position: relative;
 }
 
 .quest-block:hover {
@@ -98,13 +99,13 @@
 }
 
 .quest-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .quest-details {
-  font-size: 10px;
+  font-size: 14px;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -113,5 +114,16 @@
 
 .quest-icon {
   margin-right: 5px;
-  color: #FFD700; /* Цвет иконки */
+  color: #FFD700;
+}
+
+.quest-icon-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
