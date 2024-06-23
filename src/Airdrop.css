@@ -1,0 +1,28 @@
+.airdrop-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('wdg_airdrop.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .info-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .info-section p {
+    margin: 0;
+    font-size: 18px;
+    color: #FFD700;
+  }
+  

@@ -6,7 +6,10 @@ import chester2 from './images/chester-2.png';
 import chester3 from './images/chester-3.png';
 import chester4 from './images/chester-4.png';
 import kiza from './images/kiza.png';
-import Notification from './Notification';
+import morgen from './images/morgen.png';
+import mell from './images/mell.png';
+import breal from './images/breal.png';
+import snoop from './images/snoop.png';
 
 const caseData = [
   { id: 1, name: 'Chester', image: chester, cost: 500 },
@@ -16,6 +19,14 @@ const caseData = [
   { id: 5, name: 'Chester 4', image: chester4, cost: 2500 },
 ];
 
+const bossData = [
+  { id: 1, name: 'Kizara', image: kiza, message: 'Победи Кизару чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
+  { id: 2, name: 'Morgen', image: morgen, message: 'Победи Моргена чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
+  { id: 3, name: 'Mellstroy', image: mell, message: 'Победи Мелстроя чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
+  { id: 4, name: 'B-Real', image: breal, message: 'Победи B-Real\'а чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
+  { id: 5, name: 'Snoop Dogg', image: snoop, message: 'Победи Snoop Dogg\'а чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' }
+];
+
 const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
   const [selectedCase, setSelectedCase] = useState(null);
   const [showBattle, setShowBattle] = useState(false);
@@ -23,8 +34,6 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
   const [battleTime, setBattleTime] = useState(60); // 60 seconds for battle
   const [messages, setMessages] = useState([]); // Состояние для сообщений
   const [caseCooldowns, setCaseCooldowns] = useState({}); // Состояние для отслеживания кулдаунов сундуков
-  const [coins, setCoins] = useState([]); // Состояние для анимации монет
-  const [notification, setNotification] = useState(null); // Состояние для уведомлений
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -91,9 +100,9 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
     setShowBossBattle(true); // Предотвращаем закрытие страницы
   };
 
-  const handleKizaClick = (event) => {
+  const handleBossClick = (event) => {
     setBattleClicks(battleClicks + 1);
-    
+
     const touchX = event.touches[0].clientX;
     const touchY = event.touches[0].clientY;
     const newMessage = {
@@ -111,15 +120,36 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
     }, 2000);
   };
 
+  const generateVictoryEmojis = () => {
+    const emojis = [];
+    for (let i = 0; i < 20; i++) {
+      emojis.push({
+        id: Date.now() + i,
+        text: '💰💵💸',
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+      });
+    }
+    setMessages(prevMessages => [...prevMessages, ...emojis]);
+
+    setTimeout(() => {
+      setMessages(prevMessages =>
+        prevMessages.filter(msg => !emojis.find(emoji => emoji.id === msg.id))
+      );
+    }, 2000);
+  };
+
   const endBattle = (won) => {
     setShowBattle(false);
     setShowBossBattle(false); // Разрешаем закрытие страницы
     if (won) {
       const earnedPoints = selectedCase.cost * 2;
-      setNotification(`You won the battle! You earned ${earnedPoints} points!`);
-      animateCoins(earnedPoints); // Анимация монет при победе
+      alert(`You won the battle! You earned ${earnedPoints} points!`);
+      setPoints(points + earnedPoints);
+      setTotalPoints(totalPoints => totalPoints + earnedPoints);
+      generateVictoryEmojis();
     } else {
-      setNotification('You lost the battle!');
+      alert('You lost the battle!');
     }
     setCaseCooldowns(prevCooldowns => {
       const updatedCooldowns = {
@@ -135,28 +165,16 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
     endBattle(false);
   };
 
-  const animateCoins = (earnedPoints) => {
-    const newCoins = [];
-    for (let i = 0; i < earnedPoints / 50; i++) {
-      newCoins.push({
-        id: Date.now() + i,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight
-      });
-    }
-    setCoins(newCoins);
-    setTimeout(() => {
-      setCoins([]);
-      setPoints(points + earnedPoints);
-      setTotalPoints(totalPoints => totalPoints + earnedPoints);
-    }, 2000);
+  const getBossData = () => {
+    if (!selectedCase) return {};
+    return bossData.find(boss => boss.id === selectedCase.id) || {};
   };
+
+  const boss = getBossData();
 
   return (
     <div className="earn-page">
-      <div className="earn-header">
-        <h2>Испытай удачу в битве за золото!</h2>
-      </div>
+      <h2>Earn</h2>
       <div className="case-container-wrapper">
         <div className="case-container">
           {caseData.map((caseItem) => (
@@ -184,7 +202,7 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
           <div className="case-details">
             <img src={selectedCase.image} alt={selectedCase.name} />
             <h3>{selectedCase.name}</h3>
-            <p>Победи Босса чтобы забрать кейс - стоимость участия {selectedCase.cost} очков</p>
+            <p>{boss.message.replace('{selectedCase.cost}', selectedCase.cost)}</p>
             <button onClick={startBattle}>GO</button>
             <button onClick={handleCloseCase}>Close</button>
           </div>
@@ -204,7 +222,7 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
               </div>
             ))}
           </div>
-          <img src={kiza} alt="Kiza" className="battle-kiza" onTouchStart={handleKizaClick} />
+          <img src={boss.image} alt={boss.name} className="battle-boss" onTouchStart={handleBossClick} />
           <div className="battle-message">
             Накликай {selectedCase.cost / 2} раз за {battleTime} секунд, чтобы победить!
           </div>
@@ -212,18 +230,6 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
             {battleClicks}
           </div>
         </div>
-      )}
-      {coins.map(coin => (
-        <div
-          key={coin.id}
-          className="coin-animation"
-          style={{ top: `${coin.y}px`, left: `${coin.x}px` }}
-        >
-          💰
-        </div>
-      ))}
-      {notification && (
-        <Notification message={notification} onClose={() => setNotification(null)} />
       )}
     </div>
   );

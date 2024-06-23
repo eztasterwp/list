@@ -11,7 +11,11 @@
   color: #fff;
   text-align: center;
   box-sizing: border-box;
-  overflow-y: auto;
+  overflow-y: hidden; /* Скрывает полосу прокрутки, но оставляет возможность прокрутки */
+}
+
+.mine-page::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки в Webkit-браузерах */
 }
 
 .points-display {
@@ -22,6 +26,7 @@
   border-radius: 10px;
   margin-bottom: 20px;
   position: relative;
+  z-index: 2; /* Повышает уровень z-index */
 }
 
 .points-info {
@@ -77,8 +82,15 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   width: 100%;
-  overflow-y: auto;
-  padding-bottom: 60px;
+  padding-top: 25px; /* Добавлен отступ сверху для удаления перекрытия с верхним меню */
+  padding-bottom: 80px; /* Добавлен отступ снизу для предотвращения перекрытия с нижним меню */
+  overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.quests-container::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки в Webkit-браузерах */
 }
 
 .quest-block {
@@ -91,6 +103,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   position: relative;
+  z-index: 1;
 }
 
 .quest-block:hover {
@@ -126,4 +139,21 @@
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
+}
+
+.buttons-container {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  background-color: #444;
+  padding: 5px 0;
+  border-radius: 20px;
+  border: 1px solid #555;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 3; /* Повышает уровень z-index, чтобы меню всегда было поверх */
 }

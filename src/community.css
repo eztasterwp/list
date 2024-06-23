@@ -6,12 +6,13 @@
     height: calc(100vh - 60px);
     width: 100vw;
     margin-top: 60px;
-    background: url('workspace.jpg') no-repeat center center fixed;
+    background: url('background_community.jpg.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     text-align: center;
     box-sizing: border-box;
     overflow-y: auto; /* Прокрутка только вниз */
+    overflow-x: hidden; /* Отключение горизонтальной прокрутки */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
@@ -20,15 +21,7 @@
     display: none;  /* Chrome, Safari, Opera */
   }
   
-  .community-page h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #0088cc;  /* Telegram blue color */
-  }
-  
-  .referral-section,
-  .earnings-section,
-  .tasks-section {
+  .referral-section {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 20px;
@@ -42,20 +35,44 @@
     border-radius: 5px;
     padding: 10px;
     word-break: break-all;
-    color: #0088cc;
+    color: #FFD700;
     font-weight: bold;
+  }
+  
+  .earnings-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 12px; /* Уменьшение размера шрифта */
   }
   
   .earnings-section p {
     margin: 0;
-    font-size: 18px;
-    color: #0088cc;
+    font-size: 12px;
+    color: #FFD700;
+  }
+  
+  .earnings {
+    font-size: 12px; /* Уменьшение размера шрифта */
+    color: #FFD700;
+  }
+  
+  .tasks-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
   
   .tasks-section h3 {
     margin-bottom: 15px;
     font-size: 22px;
-    color: #0088cc;
+    color: #FFD700;
   }
   
   .task {
@@ -80,27 +97,35 @@
     margin-right: 10px;
   }
   
+  .task-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding-right: 10px; /* Отступ справа для задания */
+  }
+  
   .task-reward {
-    background-color: #0088cc;
+    background-color: #FFD700;
     border-radius: 5px;
     padding: 5px 10px;
-    color: white;
+    color: black;
     font-weight: bold;
   }
   
   .leaderboard-section {
     margin-top: 20px;
     width: 90%;
-    padding-bottom: 80px; /* Отступ снизу для предотвращения перекрытия с нижним меню */
+    padding-bottom: 100px; /* Увеличен отступ снизу для предотвращения перекрытия с нижним меню */
   }
   
   .leaderboard-button {
     width: 100%;
     padding: 15px;
-    background-color: #0088cc;
+    background-color: #FFD700;
     border: none;
     border-radius: 10px;
-    color: white;
+    color: black;
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
@@ -108,7 +133,7 @@
   }
   
   .leaderboard-button:hover {
-    background-color: #00aaff;
+    background-color: #FFA500;
     transform: scale(1.05);
   }
   

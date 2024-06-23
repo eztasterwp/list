@@ -1,10 +1,12 @@
 import React from 'react';
+import './Airdrop.css';
 
 const Airdrop = () => {
   return (
     <div className="airdrop-page">
-      <h2>Airdrop</h2>
-      <p>Здесь будет информация о раздачах.</p>
+      <div className="info-section">
+        <p>Информация о предстоящем эирдропе будет предоставлена позже, следите за обновлениями...</p>
+      </div>
     </div>
   );
 };
