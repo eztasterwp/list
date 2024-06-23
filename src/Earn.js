@@ -10,18 +10,19 @@ import morgen from './images/morgen.png';
 import mell from './images/mell.png';
 import breal from './images/breal.png';
 import snoop from './images/snoop.png';
-import finalBoss from './images/stariy.png';
+import stariy from './images/stariy.png';
+import dotaMap from './images/dota_map.jpg';
 
 const caseData = [
   { id: 1, name: 'Kizaru', image: chester, cost: 500 },
-  { id: 2, name: 'Morgenstern', image: chester1, cost: 1000 },
+  { id: 2, name: 'Morgen', image: chester1, cost: 1000 },
   { id: 3, name: 'Mellstroy', image: chester2, cost: 1500 },
-  { id: 4, name: 'Snoop Dogg', image: chester3, cost: 2000 },
-  { id: 5, name: 'B-Real', image: chester4, cost: 2500 },
+  { id: 4, name: 'B-Real', image: chester3, cost: 2000 },
+  { id: 5, name: 'Snoop Dogg', image: chester4, cost: 2500 },
 ];
 
 const bossData = [
-  { id: 1, name: 'Kizara', image: kiza, message: 'Победи Кизару чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
+  { id: 1, name: 'Kizaru', image: kiza, message: 'Победи Кизару чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
   { id: 2, name: 'Morgen', image: morgen, message: 'Победи Моргена чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
   { id: 3, name: 'Mellstroy', image: mell, message: 'Победи Мелстроя чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
   { id: 4, name: 'B-Real', image: breal, message: 'Победи B-Real\'а чтобы забрать приз. Стоимость участия {selectedCase.cost} очков!' },
@@ -31,6 +32,7 @@ const bossData = [
 const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
   const [selectedCase, setSelectedCase] = useState(null);
   const [showBattle, setShowBattle] = useState(false);
+  const [showFinalBattle, setShowFinalBattle] = useState(false);
   const [battleClicks, setBattleClicks] = useState(0);
   const [battleTime, setBattleTime] = useState(60); // 60 seconds for battle
   const [messages, setMessages] = useState([]); // Состояние для сообщений
@@ -55,7 +57,7 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
 
   useEffect(() => {
     let timer;
-    if (showBattle) {
+    if (showBattle || showFinalBattle) {
       timer = setInterval(() => {
         setBattleTime(prevTime => {
           if (prevTime <= 1) {
@@ -68,7 +70,7 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
       }, 1000);
     }
     return () => clearInterval(timer);
-  }, [showBattle]);
+  }, [showBattle, showFinalBattle]);
 
   useEffect(() => {
     if (selectedCase && battleClicks >= selectedCase.cost / 2) {
@@ -96,6 +98,18 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
   const startBattle = () => {
     setPoints(points - selectedCase.cost); // Снимаем очки за участие
     setShowBattle(true);
+    setBattleClicks(0);
+    setBattleTime(60);
+    setShowBossBattle(true); // Предотвращаем закрытие страницы
+  };
+
+  const handleFinalBossClick = () => {
+    if (points < 5000) {
+      alert('Недостаточно очков для участия в битве с финальным боссом!');
+      return;
+    }
+    setPoints(points - 5000);
+    setShowFinalBattle(true);
     setBattleClicks(0);
     setBattleTime(60);
     setShowBossBattle(true); // Предотвращаем закрытие страницы
@@ -142,9 +156,10 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
 
   const endBattle = (won) => {
     setShowBattle(false);
+    setShowFinalBattle(false);
     setShowBossBattle(false); // Разрешаем закрытие страницы
     if (won) {
-      const earnedPoints = selectedCase.cost * 2;
+      const earnedPoints = selectedCase ? selectedCase.cost * 2 : 10000; // 10000 очков за победу над финальным боссом
       alert(`You won the battle! You earned ${earnedPoints} points!`);
       setPoints(points + earnedPoints);
       setTotalPoints(totalPoints => totalPoints + earnedPoints);
@@ -155,7 +170,7 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
     setCaseCooldowns(prevCooldowns => {
       const updatedCooldowns = {
         ...prevCooldowns,
-        [selectedCase.id]: 24 * 3600000 // Устанавливаем кулдаун на 24 часа
+        [selectedCase?.id]: 24 * 3600000 // Устанавливаем кулдаун на 24 часа
       };
       return updatedCooldowns;
     });
@@ -199,8 +214,8 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
             </div>
           ))}
         </div>
-        <div className="final-boss-section">
-          <img src={finalBoss} alt="Final Boss" className="final-boss" />
+        <div className="final-boss-section" onClick={handleFinalBossClick}>
+          <img src={stariy} alt="Final Boss" className="final-boss" />
           <p>Сразись со Stariy_bog 1x1 на SF за мегаприз</p>
         </div>
       </div>
@@ -235,6 +250,22 @@ const Earn = ({ setShowBossBattle, points, setPoints, setTotalPoints }) => {
           </div>
           <div className="click-counter">
             {battleClicks}
+          </div>
+        </div>
+      )}
+      {showFinalBattle && (
+        <div className="final-battle-overlay">
+          <div className="close-button" onClick={handleCloseBattle}>&times;</div>
+          <div className="final-battle-container">
+            <img src={dotaMap} alt="Dota Map" className="dota-map" />
+            <div className="player" onTouchStart={handleBossClick}>
+              <img src="path_to_player_image" alt="Player" />
+              <div className="click-counter">{battleClicks}</div>
+            </div>
+            <div className="boss">
+              <img src={stariy} alt="Stariy" />
+              <div className="boss-hp">{battleTime} HP</div>
+            </div>
           </div>
         </div>
       )}
