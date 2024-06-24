@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/list/static/css/main.e0944c70.css",
-    "main.js": "/list/static/js/main.984f922e.js",
+    "main.js": "/list/static/js/main.048d7460.js",
     "static/media/coin1.png": "/list/static/media/coin1.c1022739744be1c393ca.png",
     "static/media/background_community.jpg.png": "/list/static/media/background_community.jpg.01959b44c72fb64eced1.png",
     "static/media/wdg_airdrop.png": "/list/static/media/wdg_airdrop.c453acee3e1bde0104a6.png",
     "static/media/morgen.png": "/list/static/media/morgen.ab0d915cafda63df0b04.png",
     "static/media/mell.png": "/list/static/media/mell.0d9829208ef41a30ea10.png",
+    "static/media/sf.png": "/list/static/media/sf.b60b03dd802cb8a7cfe4.png",
     "static/media/breal.png": "/list/static/media/breal.df5b1628c3aafcba1d6a.png",
     "static/media/snoop.png": "/list/static/media/snoop.c1addf9fc8a39fdd4b4f.png",
     "static/media/workspace.jpg": "/list/static/media/workspace.25d38181e58d1865b79b.jpg",
     "static/media/background_earn.jpg": "/list/static/media/background_earn.301500be3b070eb65886.jpg",
     "static/media/background1.jpg": "/list/static/media/background1.eef8cae3a44980b72072.jpg",
-    "static/media/dota_map.jpg": "/list/static/media/dota_map.64aedc2a771347fbe531.jpg",
     "static/media/kiza.png": "/list/static/media/kiza.ea9d00093a3a58a03e78.png",
+    "static/media/dota_map.jpg": "/list/static/media/dota_map.ee27729278fe1abb8a65.jpg",
     "static/media/stariy.png": "/list/static/media/stariy.54fdf288379cd57098d7.png",
     "static/media/chester.png": "/list/static/media/chester.806e2859f042f0b8ba37.png",
     "static/media/chester-3.png": "/list/static/media/chester-3.9331d8f32e4e3495fed2.png",
@@ -26,10 +27,10 @@
     "static/media/invitetg.png": "/list/static/media/invitetg.6d4fb402a1836d62584b.png",
     "index.html": "/list/index.html",
     "main.e0944c70.css.map": "/list/static/css/main.e0944c70.css.map",
-    "main.984f922e.js.map": "/list/static/js/main.984f922e.js.map"
+    "main.048d7460.js.map": "/list/static/js/main.048d7460.js.map"
   },
   "entrypoints": [
     "static/css/main.e0944c70.css",
-    "static/js/main.984f922e.js"
+    "static/js/main.048d7460.js"
   ]
 }
