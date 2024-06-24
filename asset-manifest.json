@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.ff84661f.css",
-    "main.js": "/list/static/js/main.20119510.js",
+    "main.css": "/list/static/css/main.f2c6b5e3.css",
+    "main.js": "/list/static/js/main.6260870b.js",
     "static/media/avatar.png": "/list/static/media/avatar.33a0fa9eb163ca25d967.png",
     "static/media/coin.png": "/list/static/media/coin.33a0fa9eb163ca25d967.png",
     "static/media/coin1.png": "/list/static/media/coin1.c1022739744be1c393ca.png",
@@ -23,16 +23,16 @@
     "static/media/chester-4.png": "/list/static/media/chester-4.9f3d6ca30087d59618db.png",
     "static/media/chester-1.png": "/list/static/media/chester-1.fd8db960df4d4858e800.png",
     "static/media/chester-2.png": "/list/static/media/chester-2.f6fd70ef0a253e38b357.png",
-    "static/media/cannabis.png": "/list/static/media/cannabis.5c233ad5adf7571e5e01.png",
+    "static/media/cannabis.png": "/list/static/media/cannabis.d437d824dc068f075720.png",
     "static/media/twitter.png": "/list/static/media/twitter.7e40f617aaa8eca864bb.png",
     "static/media/telegram.png": "/list/static/media/telegram.e9722f26cc228e817986.png",
     "static/media/invitetg.png": "/list/static/media/invitetg.6d4fb402a1836d62584b.png",
     "index.html": "/list/index.html",
-    "main.ff84661f.css.map": "/list/static/css/main.ff84661f.css.map",
-    "main.20119510.js.map": "/list/static/js/main.20119510.js.map"
+    "main.f2c6b5e3.css.map": "/list/static/css/main.f2c6b5e3.css.map",
+    "main.6260870b.js.map": "/list/static/js/main.6260870b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff84661f.css",
-    "static/js/main.20119510.js"
+    "static/css/main.f2c6b5e3.css",
+    "static/js/main.6260870b.js"
   ]
 }
