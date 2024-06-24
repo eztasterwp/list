@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.9c380845.css",
-    "main.js": "/list/static/js/main.cc4c6b27.js",
+    "main.css": "/list/static/css/main.270005c0.css",
+    "main.js": "/list/static/js/main.2f2e3015.js",
+    "static/media/avatar.png": "/list/static/media/avatar.33a0fa9eb163ca25d967.png",
+    "static/media/coin.png": "/list/static/media/coin.33a0fa9eb163ca25d967.png",
     "static/media/coin1.png": "/list/static/media/coin1.c1022739744be1c393ca.png",
     "static/media/background_community.jpg.png": "/list/static/media/background_community.jpg.01959b44c72fb64eced1.png",
     "static/media/wdg_airdrop.png": "/list/static/media/wdg_airdrop.c453acee3e1bde0104a6.png",
@@ -26,11 +28,11 @@
     "static/media/telegram.png": "/list/static/media/telegram.e9722f26cc228e817986.png",
     "static/media/invitetg.png": "/list/static/media/invitetg.6d4fb402a1836d62584b.png",
     "index.html": "/list/index.html",
-    "main.9c380845.css.map": "/list/static/css/main.9c380845.css.map",
-    "main.cc4c6b27.js.map": "/list/static/js/main.cc4c6b27.js.map"
+    "main.270005c0.css.map": "/list/static/css/main.270005c0.css.map",
+    "main.2f2e3015.js.map": "/list/static/js/main.2f2e3015.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c380845.css",
-    "static/js/main.cc4c6b27.js"
+    "static/css/main.270005c0.css",
+    "static/js/main.2f2e3015.js"
   ]
 }
