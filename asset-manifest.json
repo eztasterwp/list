@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.78b66bfd.css",
-    "main.js": "/list/static/js/main.8f7ef16d.js",
-    "static/media/plant.png": "/list/static/media/plant.4641bcc50b5c1b4d1fa1.png",
+    "main.css": "/list/static/css/main.b467848c.css",
+    "main.js": "/list/static/js/main.72fc3acf.js",
+    "static/media/harvest.png": "/list/static/media/harvest.d19076420493b6f1ef51.png",
+    "static/media/plant.png": "/list/static/media/plant.32bdd6e8d613ef2cac93.png",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
     "static/media/coin.png": "/list/static/media/coin.842ede0035acfe6588d5.png",
     "static/media/coin1.png": "/list/static/media/coin1.b3d07095c86b7660c585.png",
     "static/media/wdg_airdrop.png": "/list/static/media/wdg_airdrop.d2343c98b080f78ce856.png",
+    "static/media/flower.png": "/list/static/media/flower.c5d688d34810aeb8853f.png",
     "static/media/workspace.jpg": "/list/static/media/workspace.1374a19511523110d81e.jpg",
     "static/media/sf.png": "/list/static/media/sf.2d77f191e1e7d2b2bc14.png",
     "static/media/background1.jpg": "/list/static/media/background1.36647b54acfe54c88695.jpg",
@@ -14,22 +16,23 @@
     "static/media/background_earn.jpg": "/list/static/media/background_earn.5ba9a72ab17abfef707c.jpg",
     "static/media/mell.png": "/list/static/media/mell.76865e094f46081f3d7d.png",
     "static/media/dota_map.jpg": "/list/static/media/dota_map.7cde66e4b48c4414b172.jpg",
+    "static/media/sprout.png": "/list/static/media/sprout.ff530800c79683eebb0b.png",
     "static/media/snoop.png": "/list/static/media/snoop.90d663ce2acc778cf6d3.png",
     "static/media/breal.png": "/list/static/media/breal.dd7fd23c34f77516a78c.png",
+    "static/media/seed.png": "/list/static/media/seed.b59a5bfb9b940bbef737.png",
     "static/media/kiza.png": "/list/static/media/kiza.81124585be07bf2a8485.png",
     "static/media/stariy.png": "/list/static/media/stariy.40cbd19edfd1b8e79f59.png",
     "static/media/chester-3.png": "/list/static/media/chester-3.a3b71fac3e1d613cf949.png",
-    "static/media/chester-4.png": "/list/static/media/chester-4.3bfee89e75f228b40292.png",
     "static/media/chester.png": "/list/static/media/chester.7756ae8bc0904d1121a9.png",
     "static/media/chester-1.png": "/list/static/media/chester-1.c5175ca0072bd1b9f3cd.png",
     "static/media/chester-2.png": "/list/static/media/chester-2.d43fa6e102ce23d600c1.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.78b66bfd.css.map": "/list/static/css/main.78b66bfd.css.map",
-    "main.8f7ef16d.js.map": "/list/static/js/main.8f7ef16d.js.map"
+    "main.b467848c.css.map": "/list/static/css/main.b467848c.css.map",
+    "main.72fc3acf.js.map": "/list/static/js/main.72fc3acf.js.map"
   },
   "entrypoints": [
-    "static/css/main.78b66bfd.css",
-    "static/js/main.8f7ef16d.js"
+    "static/css/main.b467848c.css",
+    "static/js/main.72fc3acf.js"
   ]
 }
