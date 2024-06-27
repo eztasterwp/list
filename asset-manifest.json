@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.78b66bfd.css",
-    "main.js": "/list/static/js/main.c2b357ba.js",
+    "main.css": "/list/static/css/main.bb9248a4.css",
+    "main.js": "/list/static/js/main.23bb34f6.js",
     "static/media/plant.png": "/list/static/media/plant.4641bcc50b5c1b4d1fa1.png",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
     "static/media/coin.png": "/list/static/media/coin.842ede0035acfe6588d5.png",
@@ -16,20 +16,23 @@
     "static/media/dota_map.jpg": "/list/static/media/dota_map.7cde66e4b48c4414b172.jpg",
     "static/media/snoop.png": "/list/static/media/snoop.90d663ce2acc778cf6d3.png",
     "static/media/breal.png": "/list/static/media/breal.dd7fd23c34f77516a78c.png",
+    "static/media/seed.png": "/list/static/media/seed.49b83e570609182f5570.png",
     "static/media/kiza.png": "/list/static/media/kiza.81124585be07bf2a8485.png",
     "static/media/stariy.png": "/list/static/media/stariy.40cbd19edfd1b8e79f59.png",
+    "static/media/water.png": "/list/static/media/water.e714ba787a22e94c0010.png",
+    "static/media/fertilizer.png": "/list/static/media/fertilizer.0700db26870d788991ac.png",
     "static/media/chester-3.png": "/list/static/media/chester-3.a3b71fac3e1d613cf949.png",
-    "static/media/chester-4.png": "/list/static/media/chester-4.3bfee89e75f228b40292.png",
     "static/media/chester.png": "/list/static/media/chester.7756ae8bc0904d1121a9.png",
     "static/media/chester-1.png": "/list/static/media/chester-1.c5175ca0072bd1b9f3cd.png",
     "static/media/chester-2.png": "/list/static/media/chester-2.d43fa6e102ce23d600c1.png",
+    "static/media/light.png": "/list/static/media/light.27cc7f2e3fe4ddf56291.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.78b66bfd.css.map": "/list/static/css/main.78b66bfd.css.map",
-    "main.c2b357ba.js.map": "/list/static/js/main.c2b357ba.js.map"
+    "main.bb9248a4.css.map": "/list/static/css/main.bb9248a4.css.map",
+    "main.23bb34f6.js.map": "/list/static/js/main.23bb34f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.78b66bfd.css",
-    "static/js/main.c2b357ba.js"
+    "static/css/main.bb9248a4.css",
+    "static/js/main.23bb34f6.js"
   ]
 }
