@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.beebd9ae.css",
-    "main.js": "/list/static/js/main.7997958d.js",
+    "main.css": "/list/static/css/main.1ae71ea5.css",
+    "main.js": "/list/static/js/main.4b741012.js",
     "static/media/plant.png": "/list/static/media/plant.4641bcc50b5c1b4d1fa1.png",
-    "static/media/background_earn.jpg": "/list/static/media/background_earn.d7aa1a14d0bc68319762.jpg",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
     "static/media/coin.png": "/list/static/media/coin.842ede0035acfe6588d5.png",
     "static/media/coin1.png": "/list/static/media/coin1.b3d07095c86b7660c585.png",
+    "static/media/background_earn.jpg": "/list/static/media/background_earn.f859e40eb7e69969192e.jpg",
     "static/media/wdg_airdrop.png": "/list/static/media/wdg_airdrop.d2343c98b080f78ce856.png",
     "static/media/workspace.jpg": "/list/static/media/workspace.1374a19511523110d81e.jpg",
     "static/media/sf.png": "/list/static/media/sf.2d77f191e1e7d2b2bc14.png",
@@ -25,11 +25,11 @@
     "static/media/chester-2.png": "/list/static/media/chester-2.d43fa6e102ce23d600c1.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.beebd9ae.css.map": "/list/static/css/main.beebd9ae.css.map",
-    "main.7997958d.js.map": "/list/static/js/main.7997958d.js.map"
+    "main.1ae71ea5.css.map": "/list/static/css/main.1ae71ea5.css.map",
+    "main.4b741012.js.map": "/list/static/js/main.4b741012.js.map"
   },
   "entrypoints": [
-    "static/css/main.beebd9ae.css",
-    "static/js/main.7997958d.js"
+    "static/css/main.1ae71ea5.css",
+    "static/js/main.4b741012.js"
   ]
 }
