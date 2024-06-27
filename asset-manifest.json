@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.c76134f8.css",
-    "main.js": "/list/static/js/main.e1e6253e.js",
+    "main.css": "/list/static/css/main.b204ea70.css",
+    "main.js": "/list/static/js/main.68535834.js",
     "static/media/harvest.png": "/list/static/media/harvest.d19076420493b6f1ef51.png",
     "static/media/plant.png": "/list/static/media/plant.32bdd6e8d613ef2cac93.png",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
     "static/media/coin.png": "/list/static/media/coin.842ede0035acfe6588d5.png",
     "static/media/coin1.png": "/list/static/media/coin1.b3d07095c86b7660c585.png",
     "static/media/wdg_airdrop.png": "/list/static/media/wdg_airdrop.d2343c98b080f78ce856.png",
+    "static/media/background_earn.jpg": "/list/static/media/background_earn.b5bb84a7358a4967d942.jpg",
     "static/media/flower.png": "/list/static/media/flower.c5d688d34810aeb8853f.png",
     "static/media/workspace.jpg": "/list/static/media/workspace.1374a19511523110d81e.jpg",
     "static/media/sf.png": "/list/static/media/sf.2d77f191e1e7d2b2bc14.png",
     "static/media/background1.jpg": "/list/static/media/background1.36647b54acfe54c88695.jpg",
     "static/media/morgen.png": "/list/static/media/morgen.96968af66caf87d1a31d.png",
-    "static/media/background_earn.jpg": "/list/static/media/background_earn.5ba9a72ab17abfef707c.jpg",
     "static/media/mell.png": "/list/static/media/mell.76865e094f46081f3d7d.png",
     "static/media/dota_map.jpg": "/list/static/media/dota_map.7cde66e4b48c4414b172.jpg",
     "static/media/sprout.png": "/list/static/media/sprout.ff530800c79683eebb0b.png",
@@ -28,11 +28,11 @@
     "static/media/chester-2.png": "/list/static/media/chester-2.d43fa6e102ce23d600c1.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.c76134f8.css.map": "/list/static/css/main.c76134f8.css.map",
-    "main.e1e6253e.js.map": "/list/static/js/main.e1e6253e.js.map"
+    "main.b204ea70.css.map": "/list/static/css/main.b204ea70.css.map",
+    "main.68535834.js.map": "/list/static/js/main.68535834.js.map"
   },
   "entrypoints": [
-    "static/css/main.c76134f8.css",
-    "static/js/main.e1e6253e.js"
+    "static/css/main.b204ea70.css",
+    "static/js/main.68535834.js"
   ]
 }
