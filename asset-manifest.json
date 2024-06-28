@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.4be21c31.css",
+    "main.css": "/list/static/css/main.744dc0e8.css",
     "main.js": "/list/static/js/main.6390dac8.js",
     "static/media/plant.png": "/list/static/media/plant.4641bcc50b5c1b4d1fa1.png",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
@@ -11,10 +11,10 @@
     "static/media/chester-3.png": "/list/static/media/chester-3.1af0dee01c17450299ef.png",
     "static/media/chester-4.png": "/list/static/media/chester-4.1af0dee01c17450299ef.png",
     "static/media/chester.png": "/list/static/media/chester.1af0dee01c17450299ef.png",
-    "static/media/bag2.jpg": "/list/static/media/bag2.1d923d651051b790a800.jpg",
     "static/media/background_earn.jpg": "/list/static/media/background_earn.f859e40eb7e69969192e.jpg",
-    "static/media/bag1.jpg": "/list/static/media/bag1.d7081c08ee31d4f4027c.jpg",
+    "static/media/bag2.webp": "/list/static/media/bag2.7b2727191e0b142ed45e.webp",
     "static/media/background_minee.webp": "/list/static/media/background_minee.6eea45f946e2f682a31c.webp",
+    "static/media/bag1.webp": "/list/static/media/bag1.b4069d637df3c57df0fd.webp",
     "static/media/sf.png": "/list/static/media/sf.2d77f191e1e7d2b2bc14.png",
     "static/media/background1.jpg": "/list/static/media/background1.36647b54acfe54c88695.jpg",
     "static/media/morgen.png": "/list/static/media/morgen.96968af66caf87d1a31d.png",
@@ -26,11 +26,11 @@
     "static/media/stariy.png": "/list/static/media/stariy.40cbd19edfd1b8e79f59.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.4be21c31.css.map": "/list/static/css/main.4be21c31.css.map",
+    "main.744dc0e8.css.map": "/list/static/css/main.744dc0e8.css.map",
     "main.6390dac8.js.map": "/list/static/js/main.6390dac8.js.map"
   },
   "entrypoints": [
-    "static/css/main.4be21c31.css",
+    "static/css/main.744dc0e8.css",
     "static/js/main.6390dac8.js"
   ]
 }
