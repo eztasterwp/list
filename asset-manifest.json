@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.f542e65d.css",
-    "main.js": "/list/static/js/main.3c2b888f.js",
+    "main.css": "/list/static/css/main.f5628c18.css",
+    "main.js": "/list/static/js/main.d7a9cf62.js",
     "static/media/plant.png": "/list/static/media/plant.ecb652a22d04d0cbdcd7.png",
     "static/media/bag2.webp": "/list/static/media/bag2.c8bc4dbd39e114632f9a.webp",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
@@ -12,7 +12,6 @@
     "static/media/chester-3.png": "/list/static/media/chester-3.1af0dee01c17450299ef.png",
     "static/media/chester.png": "/list/static/media/chester.1af0dee01c17450299ef.png",
     "static/media/background_earn.jpg": "/list/static/media/background_earn.f859e40eb7e69969192e.jpg",
-    "static/media/bag_comm.webp": "/list/static/media/bag_comm.7b2727191e0b142ed45e.webp",
     "static/media/background_minee.webp": "/list/static/media/background_minee.6eea45f946e2f682a31c.webp",
     "static/media/sf.png": "/list/static/media/sf.2d77f191e1e7d2b2bc14.png",
     "static/media/background1.jpg": "/list/static/media/background1.36647b54acfe54c88695.jpg",
@@ -25,11 +24,11 @@
     "static/media/stariy.png": "/list/static/media/stariy.40cbd19edfd1b8e79f59.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.f542e65d.css.map": "/list/static/css/main.f542e65d.css.map",
-    "main.3c2b888f.js.map": "/list/static/js/main.3c2b888f.js.map"
+    "main.f5628c18.css.map": "/list/static/css/main.f5628c18.css.map",
+    "main.d7a9cf62.js.map": "/list/static/js/main.d7a9cf62.js.map"
   },
   "entrypoints": [
-    "static/css/main.f542e65d.css",
-    "static/js/main.3c2b888f.js"
+    "static/css/main.f5628c18.css",
+    "static/js/main.d7a9cf62.js"
   ]
 }
