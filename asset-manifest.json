@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.524528e8.css",
-    "main.js": "/list/static/js/main.0829ab0f.js",
+    "main.css": "/list/static/css/main.471effa8.css",
+    "main.js": "/list/static/js/main.ed966d79.js",
+    "static/media/mell.png": "/list/static/media/mell.006927c324d15dacbd16.png",
+    "static/media/kiza.png": "/list/static/media/kiza.2c7bea15196de320a6fb.png",
     "static/media/stable.webp": "/list/static/media/stable.adc45d9017d6193dd2e9.webp",
     "static/media/plant.png": "/list/static/media/plant.ecb652a22d04d0cbdcd7.png",
     "static/media/avatar.png": "/list/static/media/avatar.842ede0035acfe6588d5.png",
@@ -12,22 +14,24 @@
     "static/media/chester-3.png": "/list/static/media/chester-3.1af0dee01c17450299ef.png",
     "static/media/chester.png": "/list/static/media/chester.1af0dee01c17450299ef.png",
     "static/media/background_earn.jpg": "/list/static/media/background_earn.f859e40eb7e69969192e.jpg",
+    "static/media/breal.webp": "/list/static/media/breal.a2e589751de312d01701.webp",
+    "static/media/mell.webp": "/list/static/media/mell.a24e8da036164c4eafd7.webp",
     "static/media/sf.png": "/list/static/media/sf.2d77f191e1e7d2b2bc14.png",
     "static/media/background1.jpg": "/list/static/media/background1.36647b54acfe54c88695.jpg",
-    "static/media/morgen.png": "/list/static/media/morgen.96968af66caf87d1a31d.png",
-    "static/media/mell.png": "/list/static/media/mell.76865e094f46081f3d7d.png",
+    "static/media/kiza.webp": "/list/static/media/kiza.221358f9a3cb8b5249bf.webp",
     "static/media/dota_map.jpg": "/list/static/media/dota_map.7cde66e4b48c4414b172.jpg",
-    "static/media/snoop.png": "/list/static/media/snoop.90d663ce2acc778cf6d3.png",
+    "static/media/morgen.webp": "/list/static/media/morgen.f2c71267a5309d6b370f.webp",
     "static/media/breal.png": "/list/static/media/breal.dd7fd23c34f77516a78c.png",
-    "static/media/kiza.png": "/list/static/media/kiza.81124585be07bf2a8485.png",
     "static/media/stariy.png": "/list/static/media/stariy.40cbd19edfd1b8e79f59.png",
+    "static/media/morgen.png": "/list/static/media/morgen.855f6087594d70e375f5.png",
+    "static/media/snoop.png": "/list/static/media/snoop.855f6087594d70e375f5.png",
     "static/media/ton.png": "/list/static/media/ton.855f6087594d70e375f5.png",
     "index.html": "/list/index.html",
-    "main.524528e8.css.map": "/list/static/css/main.524528e8.css.map",
-    "main.0829ab0f.js.map": "/list/static/js/main.0829ab0f.js.map"
+    "main.471effa8.css.map": "/list/static/css/main.471effa8.css.map",
+    "main.ed966d79.js.map": "/list/static/js/main.ed966d79.js.map"
   },
   "entrypoints": [
-    "static/css/main.524528e8.css",
-    "static/js/main.0829ab0f.js"
+    "static/css/main.471effa8.css",
+    "static/js/main.ed966d79.js"
   ]
 }
