@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/list/static/css/main.50dfcf4d.css",
-    "main.js": "/list/static/js/main.ad2ad3c3.js",
+    "main.js": "/list/static/js/main.8b0895cd.js",
     "static/media/bag1.png": "/list/static/media/bag1.9a5703c114bec6efe39b.png",
-    "static/media/rocket.svg": "/list/static/media/rocket.4fcb768b4710b248b42be1fbd34b4391.svg",
+    "static/media/airdrop.png": "/list/static/media/airdrop.4103c8cda9681d7e1dd2.png",
+    "static/media/case.png": "/list/static/media/case.4103c8cda9681d7e1dd2.png",
+    "static/media/community.png": "/list/static/media/community.4103c8cda9681d7e1dd2.png",
+    "static/media/home.png": "/list/static/media/home.4103c8cda9681d7e1dd2.png",
+    "static/media/profile.png": "/list/static/media/profile.4103c8cda9681d7e1dd2.png",
     "index.html": "/list/index.html",
-    "static/media/home.svg": "/list/static/media/home.4a770dc8e2a212f168fe43af58d5271a.svg",
-    "static/media/stats.svg": "/list/static/media/stats.fe13d1c9a260f60ae22aba2c6d3870d8.svg",
-    "static/media/person.svg": "/list/static/media/person.023e4181f490f1ce2b3335d6aaf7892b.svg",
-    "static/media/settings.svg": "/list/static/media/settings.bcd1c3dbda5f0c103a015956913b2dcb.svg",
     "main.50dfcf4d.css.map": "/list/static/css/main.50dfcf4d.css.map",
-    "main.ad2ad3c3.js.map": "/list/static/js/main.ad2ad3c3.js.map"
+    "main.8b0895cd.js.map": "/list/static/js/main.8b0895cd.js.map"
   },
   "entrypoints": [
     "static/css/main.50dfcf4d.css",
-    "static/js/main.ad2ad3c3.js"
+    "static/js/main.8b0895cd.js"
   ]
 }
