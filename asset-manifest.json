@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.214df81e.css",
-    "main.js": "/list/static/js/main.ceba94c5.js",
+    "main.css": "/list/static/css/main.7d164a8b.css",
+    "main.js": "/list/static/js/main.a6b9cad2.js",
     "static/media/bag1.png": "/list/static/media/bag1.9a5703c114bec6efe39b.png",
-    "static/media/home.png": "/list/static/media/home.0d741c1385f4a96f30f0.png",
-    "static/media/profile.png": "/list/static/media/profile.4103c8cda9681d7e1dd2.png",
-    "static/media/airdrop.png": "/list/static/media/airdrop.828fb504e545d239219c.png",
-    "static/media/community.png": "/list/static/media/community.e5ec6414e2eb47590641.png",
-    "static/media/case.png": "/list/static/media/case.28a6017e89845ac5f1bf.png",
+    "static/media/fa-solid-900.ttf": "/list/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/fa-brands-400.ttf": "/list/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
+    "static/media/fa-solid-900.woff2": "/list/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
+    "static/media/fa-brands-400.woff2": "/list/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
+    "static/media/fa-regular-400.ttf": "/list/static/media/fa-regular-400.eb91f7b948a42799f678.ttf",
+    "static/media/fa-regular-400.woff2": "/list/static/media/fa-regular-400.21cb8f55d8e0c5b89751.woff2",
+    "static/media/fa-v4compatibility.ttf": "/list/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
+    "static/media/fa-v4compatibility.woff2": "/list/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/list/index.html",
-    "main.214df81e.css.map": "/list/static/css/main.214df81e.css.map",
-    "main.ceba94c5.js.map": "/list/static/js/main.ceba94c5.js.map"
+    "main.7d164a8b.css.map": "/list/static/css/main.7d164a8b.css.map",
+    "main.a6b9cad2.js.map": "/list/static/js/main.a6b9cad2.js.map"
   },
   "entrypoints": [
-    "static/css/main.214df81e.css",
-    "static/js/main.ceba94c5.js"
+    "static/css/main.7d164a8b.css",
+    "static/js/main.a6b9cad2.js"
   ]
 }
