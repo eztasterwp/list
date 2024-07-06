@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.e2972ec9.css",
-    "main.js": "/list/static/js/main.cadafe62.js",
+    "main.css": "/list/static/css/main.dab8ba8d.css",
+    "main.js": "/list/static/js/main.c15e00e9.js",
     "static/media/balance.png": "/list/static/media/balance.d972ef8b9cfe57ed837e.png",
     "static/media/dailyinc.png": "/list/static/media/dailyinc.17b49230900647344f1b.png",
     "static/media/sigma.png": "/list/static/media/sigma.895345dfbc4d9de1370e.png",
@@ -12,11 +12,11 @@
     "static/media/twitter.png": "/list/static/media/twitter.7e40f617aaa8eca864bb.png",
     "static/media/telegram.png": "/list/static/media/telegram.04c3d4028b28944f72b9.png",
     "index.html": "/list/index.html",
-    "main.e2972ec9.css.map": "/list/static/css/main.e2972ec9.css.map",
-    "main.cadafe62.js.map": "/list/static/js/main.cadafe62.js.map"
+    "main.dab8ba8d.css.map": "/list/static/css/main.dab8ba8d.css.map",
+    "main.c15e00e9.js.map": "/list/static/js/main.c15e00e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2972ec9.css",
-    "static/js/main.cadafe62.js"
+    "static/css/main.dab8ba8d.css",
+    "static/js/main.c15e00e9.js"
   ]
 }
