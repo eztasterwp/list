@@ -1,27 +1,33 @@
 {
   "files": {
-    "main.css": "/list/static/css/main.1f55c7cc.css",
-    "main.js": "/list/static/js/main.9b983a40.js",
+    "main.css": "/list/static/css/main.bef62d3d.css",
+    "main.js": "/list/static/js/main.c02b1b9d.js",
     "static/media/balance.png": "/list/static/media/balance.d972ef8b9cfe57ed837e.png",
     "static/media/dailyinc.png": "/list/static/media/dailyinc.17b49230900647344f1b.png",
     "static/media/soil.png": "/list/static/media/soil.314e50dca9d007cee912.png",
     "static/media/sigma.png": "/list/static/media/sigma.895345dfbc4d9de1370e.png",
     "static/media/helloWin.png": "/list/static/media/helloWin.71a546f4cec05c6aa63f.png",
     "static/media/giveaway-min.webp": "/list/static/media/giveaway-min.34ca58eb6775a634ba26.webp",
+    "static/media/coin.png": "/list/static/media/coin.842ede0035acfe6588d5.png",
+    "static/media/chester-1.png": "/list/static/media/chester-1.1af0dee01c17450299ef.png",
     "static/media/license.png": "/list/static/media/license.92513de05f80c9449907.png",
+    "static/media/breal.webp": "/list/static/media/breal.a2e589751de312d01701.webp",
     "static/media/bag30000.webp": "/list/static/media/bag30000.eef00c3f93556f676988.webp",
+    "static/media/mell.webp": "/list/static/media/mell.a24e8da036164c4eafd7.webp",
     "static/media/coffeeshop.png": "/list/static/media/coffeeshop.aeaa9d8e8085a5bccbc4.png",
+    "static/media/kiza.webp": "/list/static/media/kiza.221358f9a3cb8b5249bf.webp",
+    "static/media/morgen.webp": "/list/static/media/morgen.f2c71267a5309d6b370f.webp",
     "static/media/fertilizer.png": "/list/static/media/fertilizer.dedab09a5a0f1ef3d616.png",
     "static/media/discord.png": "/list/static/media/discord.87103b7fb8f04ea4d3ef.png",
     "static/media/twitter.png": "/list/static/media/twitter.7e40f617aaa8eca864bb.png",
     "static/media/telegram.png": "/list/static/media/telegram.04c3d4028b28944f72b9.png",
     "static/media/water.png": "/list/static/media/water.2dea3900e8fb84fc79f6.png",
     "index.html": "/list/index.html",
-    "main.1f55c7cc.css.map": "/list/static/css/main.1f55c7cc.css.map",
-    "main.9b983a40.js.map": "/list/static/js/main.9b983a40.js.map"
+    "main.bef62d3d.css.map": "/list/static/css/main.bef62d3d.css.map",
+    "main.c02b1b9d.js.map": "/list/static/js/main.c02b1b9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f55c7cc.css",
-    "static/js/main.9b983a40.js"
+    "static/css/main.bef62d3d.css",
+    "static/js/main.c02b1b9d.js"
   ]
 }
