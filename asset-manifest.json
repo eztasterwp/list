@@ -1,14 +1,12 @@
 {
   "files": {
     "main.css": "/list/static/css/main.c0d7b411.css",
-    "main.js": "/list/static/js/main.d4a089a0.js",
+    "main.js": "/list/static/js/main.6a3d54a0.js",
     "static/media/balance.png": "/list/static/media/balance.d972ef8b9cfe57ed837e.png",
     "static/media/dailyinc.png": "/list/static/media/dailyinc.17b49230900647344f1b.png",
     "static/media/sigma.png": "/list/static/media/sigma.895345dfbc4d9de1370e.png",
     "static/media/helloWin.png": "/list/static/media/helloWin.71a546f4cec05c6aa63f.png",
     "static/media/giveaway-min.webp": "/list/static/media/giveaway-min.34ca58eb6775a634ba26.webp",
-    "static/media/coin.png": "/list/static/media/coin.842ede0035acfe6588d5.png",
-    "static/media/chester-1.png": "/list/static/media/chester-1.1af0dee01c17450299ef.png",
     "static/media/breal.webp": "/list/static/media/breal.a2e589751de312d01701.webp",
     "static/media/bag30000.webp": "/list/static/media/bag30000.eef00c3f93556f676988.webp",
     "static/media/mell.webp": "/list/static/media/mell.a24e8da036164c4eafd7.webp",
@@ -24,10 +22,10 @@
     "static/media/fertilizer.png": "/list/static/media/fertilizer.f2761336c4b33218b305.png",
     "index.html": "/list/index.html",
     "main.c0d7b411.css.map": "/list/static/css/main.c0d7b411.css.map",
-    "main.d4a089a0.js.map": "/list/static/js/main.d4a089a0.js.map"
+    "main.6a3d54a0.js.map": "/list/static/js/main.6a3d54a0.js.map"
   },
   "entrypoints": [
     "static/css/main.c0d7b411.css",
-    "static/js/main.d4a089a0.js"
+    "static/js/main.6a3d54a0.js"
   ]
 }
